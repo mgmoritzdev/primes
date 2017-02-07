@@ -1,0 +1,46 @@
+#+TITLE: Primes play
+#+AUTHOR: Marcos Moritz
+#+DATE: <2017-02-05 Dom>
+#+TODO: TODO(t) | DONE(d) CANCELED(c)
+
+* Objective
+Play with big numbers with python language
+
+* Design
+Make it possible to switch primality algorithms easily
+* isPrime
+** Basic Primality test
+#+begin_src python :session :results output
+def isPrime(n):
+  if n < 2:
+    return False
+  if n % 2 == 0:
+    return n == 2
+  sqr = int(sqrt(n)) + 1
+  for number in range(2, sqr):
+    if n % number == 0:
+      return False
+  return True
+
+print ""
+print "11 is prime: " + str(isPrime(11))
+print "15 is prime: " + str(isPrime(15))
+#+end_src
+** Fermat Test
+** AKS
+
+#+RESULTS:
+: 
+: ... ... ... ... ... ... ... ... ... >>>
+: 11 is prime: True
+: 15 is prime: False
+
+* Results
+See primes.py and the tests
+Using the slow algorithm above I managed to find primes with eight digits. Using sqr fixed (engineering primes) I managed to find bigger primes.
+
+
+
+
+
+
