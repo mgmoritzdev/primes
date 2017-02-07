@@ -9,7 +9,7 @@ class BasicPrimes:
 
         sqr = int(sqrt(n)) + 1
 
-        for number in range(2, min(sqr, 10000)):
+        for number in range(2, sqr):
             if n % number == 0:
                 return False
         
